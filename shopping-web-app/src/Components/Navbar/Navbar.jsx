@@ -1,8 +1,8 @@
-import React from 'react';
+import { useState } from 'react';
 import './Navbar.css';
 import logo from '../Assets/logo.png';
 import cart_icon from '../Assets/cart_icon.png';
-import { useState } from 'react';
+
 const Navbar = () => {
 
       const [menu, setMenu] = useState("shop");
@@ -15,13 +15,13 @@ const Navbar = () => {
         <p>SHOP HERE</p>
         </div>
         <ul className="nav-menu">
-            <li onClick={()=>{setMenu('shop')}}>Shop {menu==='shop'?<hr/>:<></>}</li>
-            <li onClick={()=>{setMenu('men')}}>Men {menu==='men'?<hr/>:<></>}</li>
-            <li onClick={()=>{setMenu('women')}}>Women {menu==='women'?<hr/>:<></>}</li>
-            <li onClick={()=>{setMenu('kids')}}>Kids {menu==='kids'?<hr/>:<></>}</li>
+            <li onClick={()=>{setMenu("shop")}}>Shop {menu==="shop"?<hr/>:<></>}</li>
+            <li onClick={()=>{setMenu("men")}}>Men {menu==="men"?<hr/>:<></>}</li>
+            <li onClick={()=>{setMenu("women")}}>Women {menu==="women"?<hr/>:<></>}</li>
+            <li onClick={()=>{setMenu("kids")}}>Kids {menu==="kids"?<hr/>:<></>}</li>
         </ul>
         <div className="nav-login-cart">
-           <button>Login</button>  
+           <button>Login</button> 
            <img src={cart_icon} alt="" />
            <div className="nav-cart-count">0</div>
         </div>
