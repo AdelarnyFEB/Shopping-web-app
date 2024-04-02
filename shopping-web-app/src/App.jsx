@@ -5,6 +5,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Shop from './Pages/shop';
 import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/product';
+import Cart from './Pages/cart';
+import LoginSignUp from './Pages/LoginSignUp'
 
 function App() {
   
@@ -19,8 +21,10 @@ function App() {
       <Route path='/kids' element={<ShopCategory category= 'kids' />}/>
       <Route path='/product' element={<Product/>}>
        <Route path=':productId' element={<Product/>}>
-
+     </Route>
       </Route>
+      <Route path='/cart' element={<Cart/>}/>
+      <Route path='/login' element={<LoginSignUp/>}/>
     </Routes>
     </BrowserRouter>
     </>

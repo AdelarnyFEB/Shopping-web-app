@@ -1,9 +1,9 @@
+import Hero from "../Components/hero/hero"
 
-
-const shop = () => { 
+const shop = () => {
   return (
     <div>
-      
+     <Hero/>
     </div>
   )
 }
